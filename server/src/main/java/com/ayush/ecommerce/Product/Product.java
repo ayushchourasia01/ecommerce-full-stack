@@ -44,7 +44,7 @@ public class Product {
     private String imageUrl;
 
     @Column(name = "active")
-    private boolean active;
+    private Integer active;
 
     @Column(name = "units_in_stock")
     private int unitsInStock;
