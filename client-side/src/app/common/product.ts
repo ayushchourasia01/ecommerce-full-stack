@@ -6,7 +6,8 @@ export class Product {
                 public imageUrl: string,
                 public unitsInStock: number,
                 public dateCreated: Date,
-                public lastUpdated: Date
+                public lastUpdated: Date,
+                public unitPriceInINR: number
             ){
 
     }
