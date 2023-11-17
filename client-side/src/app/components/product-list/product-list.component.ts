@@ -14,6 +14,7 @@ export class ProductListComponent {
   ngOnInit(): void {
     this.productService.getProductList().subscribe((products) => {
       this.products = products;
+      this.convertPrices();
     });
   }
 
@@ -23,5 +24,12 @@ export class ProductListComponent {
         this.products = data;
       }
     )
+  }
+
+  convertPrices() {
+    const exchangeRate = 85; 
+    this.products.forEach(product => {
+      product.unitPriceInINR = product.unitPrice * exchangeRate;
+    });
   }
 }
